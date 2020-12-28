@@ -1,0 +1,533 @@
+body {
+  padding: 1%;
+  padding-top: 0;
+  color: white;
+  background-color: black;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Footer */
+
+#footer {
+  font-size: 0.8em;
+  text-align: center;
+}
+
+#footer a { /* adjusting icons */
+  color: white;
+  margin: 0.2em;
+  display: inline-block;
+  font-size: 1.5em;
+}
+
+#footer a:hover {
+  color: rgb(40, 103, 178);
+}
+
+/* Nav */
+
+#nav { /* sticky nav bar */
+  background-color: black;
+  list-style-type: none;
+  overflow: hidden;
+  position: sticky;
+  text-align: center;
+  margin-top: 1.4em; /* may change this once scrolling commences */
+  margin-bottom: 1.4em;
+  padding: 0;
+  top: 0;
+  z-index: 10000000; /* ensures the navbar is always on top of other elements */
+}
+
+#nav ul {
+  padding: 0;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  list-style: none;
+}
+
+#nav ul li {
+  display: inline-block;
+  margin: 0 0.35em;
+  padding: 0;
+  vertical-align: middle;
+}
+
+#nav ul li a {
+  display: inline-block;
+  height: 2.25em;
+  line-height: 2.25em;
+  padding: 0 1.25em;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px transparent;
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+}
+
+#nav a:hover { /* change text colour when hovering over links */
+  color: #636363;
+}
+
+#nav ul li a:hover { /* change block colour when hovering over links */
+  background-color: rgba(222, 222, 222, 0.25);
+}
+
+nav ul li a.current { /* changes background colour of active link */
+  background: rgb(40, 103, 178);
+}
+
+/* Introduction */
+
+#intro { /* allowing two divs side-by-side */
+  display: inline-flex;
+  flex-wrap: flex;
+}
+
+#intro div { /* creating the div boxes */
+  width: 50%;
+  background-color: rgb(25,25,25);
+  height: 35rem;
+  text-align: center;
+}
+
+#intro img { /* scaling image to fit the entire div space */
+  width: 100%;
+  height: 100%;
+}
+
+@font-face { /* adding sriracha font to website */
+  font-family: Sriracha;
+  src: url(/fonts/sriracha-regular-webfont.woff);
+}
+
+#intro div header h2 { /* changing the font of my name */
+  font-size: 60px;
+  font-family: Sriracha; /* should probably change this font */
+  margin-top: 20%;
+}
+
+#intro div p {
+  margin: 7%;
+  padding-top: 1%;
+}
+
+/* About me */
+
+#about {
+  background-image: url(images/Background/Signal_Hill.jpg); /* adding the background image */
+  margin-top: 7%;
+}
+
+#about div { 
+  height: 500px;
+  text-align: center;
+  margin: 5%;
+  margin-bottom: 4%;
+}
+
+#about div h2 {
+  padding-top: 24%;
+}
+
+/* Education */
+
+#edu div header { /* manages the headings */
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#edu img { /* UCT logo */
+  height: 80%;
+  border-radius: 50%;
+  padding: 3%;
+  margin-left: 5em;
+  float: left;
+}
+
+#edu .mySlides header {
+  margin-top: 7em;
+  margin-right: 7em;
+}
+
+  /* Slideshow container */
+  #edu .slideshow-container {
+    position: relative;
+    margin: auto;
+  }
+
+  /* Hide the images by default */
+  #edu .mySlides {
+    display: none;
+    height: 20em; /* controls the size of the slide*/
+    overflow: hidden;
+    background-color: rgb(25, 25, 25);
+  }
+
+  /* Next & previous buttons */
+  #edu .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  #edu .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  #edu .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  /* The dots/bullets/indicators */
+  #edu .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  #edu .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  /* Fading animation */
+  #edu .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+/* Contact Me */
+
+#contact div header {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#contact div p {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 4%;
+}
+
+#contact form { /* get form to be centered */
+  justify-content: center;
+  display: flex;
+}
+
+#contact form ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+#contact form input[type=submit] { /* changing submit button looks */
+  margin-top: 1em;
+  background-color: rgb(25, 25, 25);
+  color: white;
+  border: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact form input[type=submit]:hover { /* changing submit button looks on hover */
+  background-color: rgb(40, 103, 178);
+}
+
+#contact {
+  margin-bottom: 7%;
+}
+
+  /* Form */
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  select,
+  textarea {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+    background: none;
+    border-radius: 5px;
+    border: 0;
+    border: solid 1px grey;
+    color: inherit;
+    outline: 0;
+    text-decoration: none;
+    opacity: 1;
+    resize: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 0.8em;
+  }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="email"]:focus,
+    select:focus,
+    textarea:focus {
+      background: rgb(25, 25, 25);
+      border-color: white;
+    }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  select {
+    line-height: 1em;
+  }
+
+  textarea {
+    padding: 0.75em 1em;
+    width: 30em;
+  }
+
+  input { /* get name and email to be on one line */
+    padding: 0.75em 1em;
+    width: 12em;
+    float: left;
+    margin: 2.99%;
+  }
+
+  ::-webkit-input-placeholder {
+    color: inherit;
+    opacity: 0.5;
+    position: relative;
+    top: 3px;
+  }
+
+  :-moz-placeholder {
+    color: inherit;
+    opacity: 0.5;
+  }
+
+  ::-moz-placeholder {
+    color: inherit;
+    opacity: 0.5;
+  }
+
+  :-ms-input-placeholder {
+    color: inherit;
+    opacity: 0.5;
+  }
+
+/* Animation that switches between drawing the name and content */
+
+#logo{
+  width: 80%;
+  height: 80%;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fill 0.5s ease forwards 3s;
+}
+#logo path:nth-child(1) {
+  stroke-dasharray: 305.0696105957031;
+  stroke-dashoffset: 305.0696105957031;
+  animation: line-anim 2s ease forwards;
+}
+#logo path:nth-child(2) {
+  stroke-dasharray: 321.5888977050781;
+  stroke-dashoffset: 321.5888977050781;
+  animation: line-anim 2s ease forwards 0.05s;
+}
+#logo path:nth-child(3) {
+  stroke-dasharray: 161.0061798095703;
+  stroke-dashoffset: 161.0061798095703;
+  animation: line-anim 2s ease forwards 0.1s;
+}
+#logo path:nth-child(4) {
+  stroke-dasharray: 238.08067321777344;
+  stroke-dashoffset: 238.08067321777344;
+  animation: line-anim 2s ease forwards 0.15s;
+}
+#logo path:nth-child(5) {
+  stroke-dasharray: 327.5303649902344;
+  stroke-dashoffset: 327.5303649902344;
+  animation: line-anim 2s ease forwards 0.2s;
+}
+#logo path:nth-child(6) {
+  stroke-dasharray: 159.7239532470703;
+  stroke-dashoffset: 159.7239532470703;
+  animation: line-anim 2s ease forwards 0.25s;
+}
+#logo path:nth-child(7) {
+  stroke-dasharray: 381.7298889160156;
+  stroke-dashoffset: 381.7298889160156;
+  animation: line-anim 2s ease forwards 0.3s;
+}
+#logo path:nth-child(8) {
+  stroke-dasharray: 337.16168212890625;
+  stroke-dashoffset: 337.16168212890625;
+  animation: line-anim 2s ease forwards 0.35s;
+}
+#logo path:nth-child(9) {
+  stroke-dasharray: 214.5718994140625;
+  stroke-dashoffset: 214.5718994140625;
+  animation: line-anim 2s ease forwards 0.4s;
+}
+#logo path:nth-child(10) {
+  stroke-dasharray: 258.39544677734375;
+  stroke-dashoffset: 258.39544677734375;
+  animation: line-anim 2s ease forwards 0.45s;
+}
+#logo path:nth-child(11) {
+  stroke-dasharray: 265.98065185546875;
+  stroke-dashoffset: 265.98065185546875;
+  animation: line-anim 2s ease forwards 0.5s;
+}
+#logo path:nth-child(12) {
+  stroke-dasharray: 261.4350280761719;
+  stroke-dashoffset: 261.4350280761719;
+  animation: line-anim 2s ease forwards 0.55s;
+}
+#logo path:nth-child(13) {
+  stroke-dasharray: 310.2664794921875;
+  stroke-dashoffset: 310.2664794921875;
+  animation: line-anim 2s ease forwards 0.6s;
+}
+#logo path:nth-child(14) {
+  stroke-dasharray: 246.318359375;
+  stroke-dashoffset: 246.318359375;
+  animation: line-anim 2s ease forwards 0.65s;
+}
+#logo path:nth-child(15) {
+  stroke-dasharray: 361.019775390625;
+  stroke-dashoffset: 361.019775390625;
+  animation: line-anim 2s ease forwards 0.7s;
+}
+#logo path:nth-child(16) {
+  stroke-dasharray: 297.5158996582031;
+  stroke-dashoffset: 297.5158996582031;
+  animation: line-anim 2s ease forwards 0.75s;
+}
+
+@keyframes line-anim {
+  to {
+      stroke-dashoffset: 0;
+  }
+}
+@keyframes fill {
+  from {
+      fill: transparent;
+  }
+  to {
+      fill: white;
+  }
+}
+
+#anim {
+  animation: invisible 1s ease forwards 5s;
+}
+
+@keyframes invisible {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
+
+#wrapper {
+  opacity: 0;
+  position: fixed;
+  animation: visibility 1s ease-in forwards 4.5s;
+}
+
+@keyframes visibility {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    position: relative;
+  }
+}
+
+/* Experience */
+
+#exp .heading { 
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+#exp .info {
+  background-color: rgb(25, 25, 25);
+  width: 40%;
+  height: 250px;
+  margin: 2%;
+  padding: 2%;
+}
+
+#exp .block { /* align the side-by-side divs to the centre */
+  display: flex;
+  justify-content: center;
+}
+
+/* Skills */
+
+#skills .heading {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#skills .block { /* align the side-by-side divs to the centre */
+  display: flex;
+  height: 300px;
+  margin-top: 3%;
+}
+
+#skills img {
+  width: 100%;
+  height: 100%;
+  min-width: 487px;
+}
+
+#skills .block .info {
+  background-color: rgb(25, 25, 25);
+  padding: 2%;
+}
+

@@ -1,0 +1,15 @@
+Animate name
+https://www.youtube.com/watch?v=vJNVramny9k
+
+For Animations
+https://levelup.gitconnected.com/how-to-create-frame-by-frame-moving-image-on-scroll-effect-30ce577c63c2
+
+Adding fonts to website
+https://www.pagecloud.com/blog/how-to-add-custom-fonts-to-any-website
+https://www.w3schools.com/css/css3_fonts.asp
+
+Host it on Github
+https://www.youtube.com/watch?v=u-RLu_8kwA0
+
+Managing Contact Form
+https://formspree.io/
